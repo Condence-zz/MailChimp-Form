@@ -9,6 +9,10 @@ if ( ! class_exists( 'MailChimp_Form_API' ) ) {
 				 
 			} 
 		}
+		/**
+		* MailChimp API v3.0 Get Lists in PHP
+		* https://rudrastyh.com/mailchimp-api/get-lists.html 
+		*/
 		public function MailChimp_Connect( $url, $request_type, $api_key, $data = array() ) {
 			if( $request_type == 'GET' )
 				$url .= '?' . http_build_query($data);
