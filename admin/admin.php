@@ -35,7 +35,7 @@ if ( ! class_exists( 'MailChimp_Panel' ) ) {
 					'Configuracion' => __('Configuración', 'MailChimp-Form') 
 				);
 				?>
-				<div class="wrap">
+				<div class="wrap" id="MailChimp_Form">
 					<h2>MailChimp Form</h2>
 					<h2 class="nav-tab-wrapper">
 					<?php 
@@ -45,6 +45,25 @@ if ( ! class_exists( 'MailChimp_Panel' ) ) {
 					}
 					?>
 					</h2> 
+					<div class="container">
+					<?php 
+					if (empty($_GET['tab'])) {
+						$swichtab = '';
+					} else {
+						$swichtab = $_GET['tab'];
+					} 
+					switch ($swichtab) {
+					    case "About":
+					        echo $_GET['tab'];
+					        break;
+					    case "Configuracion":
+					        echo $_GET['tab'];
+					        break; 
+					    default:
+					       echo "Test";
+					}
+					?>
+					</div>
 				</div>
 				<?php
 			} 

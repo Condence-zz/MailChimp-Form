@@ -25,5 +25,6 @@ add_action( 'plugins_loaded', function(){
   load_plugin_textdomain( 'MailChimp-Form', false, MCF_PLUGIN_PATH . '/lang' );
 } ); 
 if( is_admin() ){ 
-	require 'admin/admin.php'; 
+	require 'admin/admin.php';
+	require 'admin/mailchimp.php'; 
 } 
